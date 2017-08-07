@@ -1,0 +1,7 @@
+README.rst
+setup.py
+quick_secure/__init__.py
+quick_secure.egg-info/PKG-INFO
+quick_secure.egg-info/SOURCES.txt
+quick_secure.egg-info/dependency_links.txt
+quick_secure.egg-info/top_level.txt
