@@ -1,4 +1,4 @@
-# quick_secure
+# Quick Secure
 String encryption
 
 
