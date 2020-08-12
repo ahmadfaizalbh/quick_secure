@@ -29,7 +29,7 @@ Usage
     print(encrypted_message)
 
     # Decrypt message
-    decrypted*message = quick*secure.encrypt(encrypted_message, password)
+    decrypted*message = quick*secure.decrypt(encrypted_message, password)
     print(decrypted_message)
 
 
