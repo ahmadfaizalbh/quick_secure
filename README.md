@@ -18,7 +18,7 @@ encrypted_message = quick_secure.encrypt(message, password)
 print(encrypted_message)
 
 #Decrypt message
-decrypted_message = quick_secure.encrypt(encrypted_message, password)
+decrypted_message = quick_secure.decrypt(encrypted_message, password)
 print(decrypted_message)
 ```
 
