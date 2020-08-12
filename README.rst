@@ -25,11 +25,11 @@ Usage
     password = "confidential"
 
     # Encrypt message
-    encrypted*message = quick_secure.encrypt(message, password)
+    encrypted_message = quick_secure.encrypt(message, password)
     print(encrypted_message)
 
     # Decrypt message
-    decrypted*message = quick_secure.decrypt(encrypted_message, password)
+    decrypted_message = quick_secure.decrypt(encrypted_message, password)
     print(decrypted_message)
 
 
