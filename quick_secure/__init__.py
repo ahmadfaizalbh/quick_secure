@@ -24,22 +24,22 @@ def _build_bin_left(char, pos):
     return num
 
 
-def encode(string, key):
-    length = len(string)
-    key_codes = cycle(map(ord, key))
+def encrypt(message, password):
+    length = len(message)
+    key_codes = cycle(map(ord, password))
     ens = "".join(_build_char_right((_build_bin_left(s, i) + next(key_codes) + length - i))
-                  for i, s in enumerate(string))
+                  for i, s in enumerate(message))
     code = base64.urlsafe_b64encode(ens.encode()).decode().strip("=")
     return _shuffle(code)
 
 
-def decode(decode_string, key):
-    string = _shuffle(decode_string)
+def decrypt(message, password):
+    string = _shuffle(message)
     padding = 4 - (len(string) % 4)
     if padding != 4:
         string += "=" * padding
-    key_codes = cycle(map(ord, key))
-    string = base64.urlsafe_b64decode(string).decode()
-    length = len(string)
+    key_codes = cycle(map(ord, password))
+    message = base64.urlsafe_b64decode(message).decode()
+    length = len(message)
     return "".join(_build_char_right((_build_bin_left(s, i) + i - next(key_codes) - length))
-                   for i, s in enumerate(string))
+                   for i, s in enumerate(message))
