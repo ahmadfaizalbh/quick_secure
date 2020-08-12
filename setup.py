@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='quick_secure',
-    version='0.2.1',
+    version='0.2.1.1',
     py_modules=['quick_secure'],
     author="Ahmad Faizal B H",
     author_email="ahmadfaizalbh726@gmail.com",
